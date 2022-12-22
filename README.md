@@ -48,7 +48,8 @@ Design tokens are visual design elements that can be standardized and reused acr
 
 Design tokens include things like colors, typography, spacing, and other design elements that can be easily referenced and implemented consistently throughout a design project.
 
- 
+## Formats
+
 Tokens are defined using JSON format and CSS variables, e.g
 ```
   {
