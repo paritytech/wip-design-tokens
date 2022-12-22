@@ -1,0 +1,26 @@
+{
+  "name": "design-tokens",
+  "version": "0.1.0",
+  "files": [
+    "src/*.js",
+    "src/*.css"
+  ],
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "build:global:token-transformer": "npm exec token-transformer src/polkadot/figma-exporter/polkadot.json src/polkadot/token-transformer/global.json global --expandTypography=false --expandComposition=false --expandShadow --resolveReferences",
+    "build:semantic-light:token-transformer": "npx token-transformer src/polkadot/figma-exporter/polkadot.json src/polkadot/token-transformer/light.json semantic,semantic-light --expandTypography --expandComposition=false --expandShadow --resolveReferences",
+    "build:semantic-dark:token-transformer": "npx token-transformer src/polkadot/figma-exporter/polkadot.json src/polkadot/token-transformer/dark.json semantic,semantic-dark --expandTypography --expandComposition=false --expandShadow --resolveReferences",
+    "build:token-transformer": "npm run build:global:token-transformer && npm run build:semantic-light:token-transformer && npm run build:semantic-dark:token-transformer",
+    "build:styled-dictionary": "node ./scripts/build-style-dictionary.cjs polkadot src/polkadot/token-transformer src/polkadot/style-dictionary/",
+    "build": "npm run build:token-transformer && npm run build:styled-dictionary",
+    "clean": "rm -rf src/polkadot/token-transformer/ && rm -rf src/polkadot/style-dictionary/"
+  },
+  "devDependencies": {
+    "style-dictionary": "^3.7.1",
+    "token-transformer": "^0.0.27"
+  }
+}
