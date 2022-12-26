@@ -11,19 +11,19 @@ CSS variables will be generated in the [output directory](https://github.com/par
 
 global:
 ```
-import global from "https://github.com/paritytech/wip-design-tokens/blob/main/src/polkadot/style-dictionary/global.json" assert {
+import global from "https://raw.githubusercontent.com/paritytech/wip-design-tokens/main/src/polkadot/style-dictionary/global.json" assert {
   type: "json",
 };
 ```
 light theme:
 ```
-import light from "https://github.com/paritytech/wip-design-tokens/blob/main/src/polkadot/style-dictionary/light.json" assert {
+import light from "https://raw.githubusercontent.com/paritytech/wip-design-tokens/main/src/polkadot/style-dictionary/light.json" assert {
   type: "json",
 };
 ```
 dark theme:
 ```
-import dark from "https://github.com/paritytech/wip-design-tokens/blob/main/src/polkadot/style-dictionary/dark.json" assert {
+import dark from "https://raw.githubusercontent.com/paritytech/wip-design-tokens/main/src/polkadot/style-dictionary/dark.json" assert {
   type: "json",
 };
 ```
